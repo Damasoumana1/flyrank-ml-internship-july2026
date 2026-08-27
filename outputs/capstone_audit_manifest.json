@@ -1,0 +1,22 @@
+{
+  "analysis_month": "2026-03",
+  "outcome_month": "2026-04",
+  "seed": 42,
+  "model_features": [
+    "log_march_impressions",
+    "log_march_clicks",
+    "march_avg_position",
+    "march_days_with_impressions",
+    "log_march_ga4_sessions",
+    "march_ga4_available_days",
+    "march_position_missing"
+  ],
+  "target": "is_declining_next30",
+  "group_column": "client_hash_id",
+  "future_or_label_features_in_model": [],
+  "metrics_file": "work/outputs/capstone_metrics.json",
+  "figures": [
+    "work/outputs/figures/capstone_model_comparison.png",
+    "work/outputs/figures/capstone_feature_importance.png"
+  ]
+}
