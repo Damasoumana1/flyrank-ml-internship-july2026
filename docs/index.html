@@ -256,7 +256,7 @@
 <h2>5. Evaluation</h2>
 
 <figure class="evidence-figure">
-  <img src="../work/outputs/figures/capstone_model_comparison.png" alt="Bar chart comparing Precision at 10, 20 and 50 for the baseline, Logistic Regression and Random Forest">
+  <img src="../work/outputs/capstone_model_comparison.png" alt="Bar chart comparing Precision at 10, 20 and 50 for the baseline, Logistic Regression and Random Forest">
   <figcaption>Figure 1. Precision at K on the same client-held-out test split.</figcaption>
 </figure>
 <p>The feature frame contains 176,737 rows. A single client-group holdout reserves 20% of the rows for testing, resulting in 138,309 training rows and 38,428 test rows. The split contains 37 pseudonymized client groups in training and 10 in testing. The measured positive rate is 0.5319 in the full joined frame and 0.4538 in the held-out test rows.</p>
@@ -315,7 +315,7 @@
 <h2>6. Interpretation</h2>
 
 <figure class="evidence-figure">
-  <img src="../work/outputs/figures/capstone_feature_importance.png" alt="Horizontal bar chart of Random Forest feature importance">
+  <img src="../work/outputs/capstone_feature_importance.png" alt="Horizontal bar chart of Random Forest feature importance">
   <figcaption>Figure 2. Random Forest feature importance on the final March-only feature set.</figcaption>
 </figure>
 <p>The strongest measured result is a ranking improvement over the transparent ML-07 rule under the same client-held-out test protocol. The Random Forest improved Precision@50 from 0.16 to 0.86, while the test base rate was 0.4538. Logistic Regression also exceeded the baseline, but its Precision@50 of 0.54 was lower than the Random Forest's 0.86.</p>
