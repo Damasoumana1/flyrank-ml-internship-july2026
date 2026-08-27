@@ -47,7 +47,7 @@ The baseline is fair because it uses the same March-only inputs, the same held-o
 |---|---:|---:|---:|---:|---:|
 | ML-07 transparent baseline | 0.4747 | 0.4227 | 0.20 | 0.20 | 0.16 |
 | Logistic Regression | 0.5792 | 0.5064 | 0.70 | 0.60 | 0.54 |
-| Random Forest | 0.5899 | 0.5314 | 0.90 | 0.90 | 0.86 |
+| Random Forest | 0.5888 | 0.5303 | 0.90 | 0.90 | 0.86 |
 
 The baseline is weaker than the test base rate at its reported top-K cutoffs. This is an observed result on this split, not evidence that the rule is universally poor; it indicates that this particular fixed heuristic did not order the held-out rows effectively under the capstone protocol.
 
@@ -75,12 +75,12 @@ The feature frame contains 176,737 rows. A single client-group holdout reserves 
 
 The primary metrics are ROC-AUC, Average Precision and Precision@K for K equal to 10, 20 and 50. Precision@K matches the operational question because a reviewer usually has a limited review capacity. Every result is reported next to the held-out test base rate of 0.4538.
 
-The Random Forest is the strongest method on every reported top-K metric in this run. At Precision@50, it places 43 of the first 50 held-out records in the positive class, compared with 8 of 50 for the baseline. This is a measured difference on one client-held-out split, not a production guarantee. The model's ROC-AUC of 0.5899 and Average Precision of 0.5314 indicate a modest overall ranking signal despite the high precision observed at the smallest cutoffs.
+The Random Forest is the strongest method on every reported top-K metric in this run. At Precision@50, it places 43 of the first 50 held-out records in the positive class, compared with 8 of 50 for the baseline. This is a measured difference on one client-held-out split, not a production guarantee. The model's ROC-AUC of 0.5888 and Average Precision of 0.5303 indicate a modest overall ranking signal despite the high precision observed at the smallest cutoffs.
 
 | Metric | Test base rate | ML-07 baseline | Logistic Regression | Random Forest |
 |---|---:|---:|---:|---:|
-| ROC-AUC | — | 0.4747 | 0.5792 | 0.5899 |
-| Average Precision | 0.4538 | 0.4227 | 0.5064 | 0.5314 |
+| ROC-AUC | — | 0.4747 | 0.5792 | 0.5888 |
+| Average Precision | 0.4538 | 0.4227 | 0.5064 | 0.5303 |
 | Precision@10 | 0.4538 | 0.20 | 0.70 | 0.90 |
 | Precision@20 | 0.4538 | 0.20 | 0.60 | 0.90 |
 | Precision@50 | 0.4538 | 0.16 | 0.54 | 0.86 |
